@@ -41,7 +41,7 @@ public class DataHelper {
         return new CardInfo(1, "5559 0000 0000 0002");
     }
     public static int generateValidAmount(int balance) {
-        return new Random().nextInt(Math.abs(balance) + 1);
+        return new Random().nextInt(Math.abs(balance) - 1);
     }
     public static int generateInvalidAmount(int balance) {
         return Math.abs(balance) + new Random().nextInt(5000);

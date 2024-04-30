@@ -8,7 +8,6 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.chrome.ChromeOptions;
 import pages.DashboardPage;
 import pages.LoginPage;
-import pages.VerificationPage;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -41,7 +40,7 @@ public class TransferTest {
         var authInfo = DataHelper.getAuthInfo();
         var verificationPage = loginPage.validLogin(authInfo);
         var verifyInfo = DataHelper.getVerificationCode();
-        var dashboardPage = verificationPage.activeVerify(verifyInfo);
+        dashboardPage = verificationPage.activeVerify(verifyInfo);
         firstCardInfo = getFirstCardInfo();
         secondCardInfo = getSecondCardInfo();
         firstCardBalance = dashboardPage.getCardBalance(0);
